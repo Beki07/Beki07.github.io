@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belkis Akaichi Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- ---------------------- HEADER ---------------------- -->
 <header>
-    <a href="#" class="logo">Belkis Akaichi</a>
+    <a href="#" class="logo" data-target="home">Belkis Akaichi</a>
 
     <nav>
         <a href="#" class="nav-link active" data-target="home">Home</a>
@@ -25,202 +29,312 @@
         <a href="#" class="nav-link" data-target="references">References</a>
         <a href="#" class="nav-link" data-target="contact">Contact</a>
     </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
 </header>
 
 <!-- ---------------------- HOME ---------------------- -->
-<section id="home" class="section active">
+<section id="home" class="section active fade-in">
     <div class="home-container">
-
         <div class="home-left">
-            <img src="profile.jpg" class="profile-img" alt="Belkis">
+            <img src="profile.jpg" class="profile-img" alt="Belkis Akaichi">
         </div>
 
         <div class="home-right">
             <h1>Hi, I'm <span>Belkis</span></h1>
             <h3 id="role-text"></h3>
-            <p id="intro-text">
-                Welcome to my professional portfolio. Passionate about robotics, aerospace, and programming.
+
+            <p>
+                Welcome to my professional portfolio. Passionate about robotics,
+                aerospace, programming, and building real engineering solutions.
             </p>
 
             <div class="social-icons">
-                <a href="mailto:belkis@example.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/belkisakaichi"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/belkisakaichi"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:belkisakaichi1@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/belkisakaichi"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/belkisakaichi"><i class="fab fa-instagram"></i></a>
                 <a href="https://twitter.com/belkisakaichi"><i class="fab fa-twitter"></i></a>
             </div>
 
-            <a href="#" class="btn" data-target="contact">Hire Me</a>
+            <a href="#" class="btn nav-link" data-target="contact">Hire Me</a>
         </div>
-
     </div>
 </section>
 
-<!-- ---------------------- ABOUT ---------------------- -->
+<!-- ===================== ABOUT SECTION ===================== -->
 <section id="about" class="section">
     <div class="section-content">
-        <h2>About Me</h2>
 
-        <div class="about-wrapper">
+        <!-- HUD / TOP BAR -->
+        <div class="about-hud">
+            <div class="hud-left">
+                <span class="hud-label">MISSION</span>
+                <h2 class="hud-title">BELKIS // LIFE FLIGHT LOG</h2>
+            </div>
+            <div class="hud-right">
+                <span class="hud-step-label">STAGE</span>
+                <span class="hud-step-value" id="about-stage-label">00 — PRE-LAUNCH</span>
+            </div>
+        </div>
 
-            <!-- LEFT ARROW -->
-            <button class="about-arrow about-arrow-left">❮</button>
+        <!-- SPACE BACKGROUND + RAIL -->
+        <div class="about-space">
+            <canvas class="about-stars-canvas"></canvas>
 
-            <!-- SLIDES -->
-            <div class="about-slides">
+            <!-- main rail / slider -->
+            <div class="about-rail">
+                <div class="about-rail-inner">
 
-                <!-- SLIDE 0 — OVERVIEW -->
-                <div class="about-slide active about-overview">
+                    <!-- ⭐⭐⭐⭐⭐ NEW STAGE 0: INTRO / PRE-LAUNCH ⭐⭐⭐⭐⭐ -->
+                    <article class="about-node about-node--intro active" data-index="0" data-label="00 — PRE-LAUNCH // ORIGIN">
+                        <div class="about-card">
+                            
+                            <div class="about-card-text">
+                                <p class="card-tag">ORIGIN • TRAJECTORY • IDENTITY</p>
+                                <h3>Stage 00 — Pre-Launch: Setting the Vector</h3>
+                                <p>
+                                    Before the engineering, before the volunteering, before the adventures —
+                                    there was simply curiosity. A mind that wanted to understand how things work,
+                                    and a heart that wanted to build a meaningful life.
+                                </p>
+                                <ul class="card-list">
+                                    <li>A childhood filled with movement, science, and exploration.</li>
+                                    <li>A natural drive toward precision, logic, and creativity.</li>
+                                    <li>A trajectory shaped by resilience and ambition.</li>
+                                </ul>
+                                <p>
+                                    This stage is the quiet ignition — the reason all other stages exist.
+                                </p>
+                            </div>
 
-                    <div class="about-main-card">
-                        <h3>Who I Am</h3>
-                        <p>
-                            I'm Belkis Akaichi — a Mechanical Engineering student inspired by robotics,
-                            aerospace systems, programming, and hands-on innovation.
-                            Before diving into my timeline, here are the tools and fields that define me.
-                        </p>
-                    </div>
+                            <div class="about-card-visual">
+                                <div class="card-hero">
+                                    <img src="images/intro-hero.jpg" alt="Belkis origin story">
+                                </div>
+                                <div class="card-meta">
+                                    <div>
+                                        <span class="meta-label">VECTOR</span>
+                                        <span class="meta-value">Curiosity → Engineering</span>
+                                    </div>
+                                    <div>
+                                        <span class="meta-label">SIGNAL</span>
+                                        <span class="meta-value">Identity before trajectory</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-                    <!-- Floating Logos -->
-                    <div class="logo-orbit">
-                        <img src="logos/python.png" class="skill-logo">
-                        <img src="logos/cpp.png" class="skill-logo">
-                        <img src="logos/solidworks.png" class="skill-logo">
-                        <img src="logos/ansys.png" class="skill-logo">
-                        <img src="logos/matlab.png" class="skill-logo">
-                        <img src="logos/arduino.png" class="skill-logo">
-                        <img src="logos/redcrescent.png" class="skill-logo">
-                        <img src="logos/robotics.png" class="skill-logo">
-                        <img src="logos/ai.png" class="skill-logo">
-                        <img src="logos/cad.png" class="skill-logo">
-                    </div>
+                    <!-- STAGE 1: ACADEMICS -->
+                    <article class="about-node about-node--academics" data-index="1" data-label="01 — LAUNCH // ACADEMICS">
+                        <div class="about-card">
+                            <div class="about-card-text">
+                                <p class="card-tag">ACADEMICS • MECHANICAL ENGINEERING • AEROSPACE-DREAMING</p>
+                                <h3>Stage 01 — Launch: Building the Core</h3>
+                                <p>
+                                    I’m Belkis Akaichi, a Mechanical Engineering student in Istanbul on a
+                                    100% merit scholarship. I’m obsessed with turning equations, code, and
+                                    CAD models into real systems that move, fly, or solve a problem.
+                                </p>
+                                <ul class="card-list">
+                                    <li>Strong background in calculus, physics, mechanics, and thermodynamics.</li>
+                                    <li>Experience in SolidWorks, AutoCAD, and Ansys for design & simulation.</li>
+                                    <li>Programming in Python, C, C++ and working with Arduino & robotics.</li>
+                                </ul>
+                                <a href="Belkis_Transcript.pdf" target="_blank" class="card-link">
+                                    <i class="fas fa-file-pdf"></i> View my official academic transcript
+                                </a>
+                            </div>
+
+                            <div class="about-card-visual">
+                                <div class="card-hero">
+                                    <img src="images/academics-hero.jpg" alt="Belkis in academic mode">
+                                </div>
+                                <div class="card-meta">
+                                    <div>
+                                        <span class="meta-label">FOCUS</span>
+                                        <span class="meta-value">Mechanics, Energy, Aerospace</span>
+                                    </div>
+                                    <div>
+                                        <span class="meta-label">STATUS</span>
+                                        <span class="meta-value">In orbit — undergraduate phase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- STAGE 2: VOLUNTEERING & LEADERSHIP -->
+                    <article class="about-node about-node--volunteering" data-index="2" data-label="02 — GROUND CREW // VOLUNTEERING">
+                        <div class="about-card">
+                            <div class="about-card-text">
+                                <p class="card-tag">VOLUNTEERING • RED CRESCENT • LEADERSHIP</p>
+                                <h3>Stage 02 — Ground Crew: Showing Up for People</h3>
+                                <p>
+                                    Engineering is not just about machines; it’s also about people. Through
+                                    volunteering and leadership, I learned how to be calm when things get chaotic,
+                                    and how responsibility feels in real life — not just on paper.
+                                </p>
+                                <ul class="card-list">
+                                    <li>Red Crescent volunteer: ambulance missions, real accident response, first-aid.</li>
+                                    <li>Helped organize COVID-19 vaccination campaigns and blood donations.</li>
+                                    <li>Founder & President of PTB scientific club, still inspiring students today.</li>
+                                </ul>
+                            </div>
+
+                            <div class="about-card-visual">
+                                <div class="card-hero">
+                                    <img src="images/volunteering-hero.jpg" alt="Belkis volunteering and leading">
+                                </div>
+                                <div class="card-meta">
+                                    <div>
+                                        <span class="meta-label">ROLE</span>
+                                        <span class="meta-value">First-aider, organizer, founder</span>
+                                    </div>
+                                    <div>
+                                        <span class="meta-label">IMPACT</span>
+                                        <span class="meta-value">From classrooms to real emergencies</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- STAGE 3: SPORTS -->
+                    <article class="about-node about-node--sports" data-index="3" data-label="03 — KINETIC SYSTEMS // SPORTS">
+                        <div class="about-card">
+                            <div class="about-card-text">
+                                <p class="card-tag">SPORTS • WATER • ENDURANCE</p>
+                                <h3>Stage 03 — Kinetic Systems: Training Body & Mind</h3>
+                                <p>
+                                    I don’t separate body and mind. Swimming, canoeing, and outdoor activities
+                                    are how I train consistency, resilience, and the ability to keep going when
+                                    things are difficult — exactly what engineering projects require.
+                                </p>
+                                <ul class="card-list">
+                                    <li>Strong swimmer; distance and rhythm-focused training.</li>
+                                    <li>Canoeing and outdoor motion: balance, control, and focus.</li>
+                                    <li>Running, hiking, and long walks to reset my thinking.</li>
+                                </ul>
+                            </div>
+
+                            <div class="about-card-visual">
+                                <div class="card-hero">
+                                    <img src="images/sports-hero.jpg" alt="Belkis doing sports and activities">
+                                </div>
+                                <div class="card-meta">
+                                    <div>
+                                        <span class="meta-label">MINDSET</span>
+                                        <span class="meta-value">Better than yesterday, every day</span>
+                                    </div>
+                                    <div>
+                                        <span class="meta-label">TRANSFER</span>
+                                        <span class="meta-value">Discipline → exams & projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- STAGE 4: HOBBIES -->
+                    <article class="about-node about-node--hobbies" data-index="4" data-label="04 — INNER UNIVERSE // MIND & HOBBIES">
+                        <div class="about-card">
+                            <div class="about-card-text">
+                                <p class="card-tag">CHESS • RUBIK’S CUBE • PIANO • SPACE</p>
+                                <h3>Stage 04 — Inner Universe: Strategy, Creativity, Curiosity</h3>
+                                <p>
+                                    When I’m not working on engineering, I’m usually solving something else:
+                                    a chess position, a Rubik’s cube, a piano piece, or a question about space.
+                                    These are the systems that keep my mind sharp and my imagination alive.
+                                </p>
+                                <ul class="card-list">
+                                    <li>Rubik’s cubes & puzzles: pattern recognition and algorithmic thinking.</li>
+                                    <li>Chess: long-term planning, trade-offs, and strategy under constraints.</li>
+                                    <li>Piano and space exploration: balancing precision with creativity and wonder.</li>
+                                </ul>
+                            </div>
+
+                            <div class="about-card-visual">
+                                <div class="card-hero">
+                                    <img src="images/hobbies-hero.jpg" alt="Belkis hobbies and inner universe">
+                                </div>
+                                <div class="card-meta">
+                                    <div>
+                                        <span class="meta-label">SIGNAL</span>
+                                        <span class="meta-value">Strategic, curious, playful mind</span>
+                                    </div>
+                                    <div>
+                                        <span class="meta-label">VECTOR</span>
+                                        <span class="meta-value">Heading toward aerospace</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
-
-                <!-- SLIDE 1 -->
-                <div class="about-slide">
-                    <div class="about-card">
-                        <img src="images/2025.jpg" class="about-img">
-                        <h3>2025 — The Leap Forward</h3>
-                        <p>
-                            Deepened robotics and aerospace work, advanced simulation projects,
-                            drone autonomy development, and optimized mechanical coding workflows.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SLIDE 2 -->
-                <div class="about-slide">
-                    <div class="about-card">
-                        <img src="images/2024.jpg" class="about-img">
-                        <h3>2024 — Responsibility</h3>
-                        <p>
-                            Transferred to YTU, volunteered in ambulance missions,
-                            and founded PTB Club to unite future engineers.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SLIDE 3 -->
-                <div class="about-slide">
-                    <div class="about-card">
-                        <img src="images/2023.jpg" class="about-img">
-                        <h3>2023 — The First Flight</h3>
-                        <p>
-                            Built my first autonomous drone.  
-                            The moment engineering became more than passion.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SLIDE 4 -->
-                <div class="about-slide">
-                    <div class="about-card">
-                        <img src="images/2022.jpg" class="about-img">
-                        <h3>2022 — Foundations</h3>
-                        <p>
-                            Focused heavily on math, programming, CAD modeling,
-                            and control theory. Built the foundations of engineering.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SLIDE 5 -->
-                <div class="about-slide">
-                    <div class="about-card">
-                        <img src="images/2020.jpg" class="about-img">
-                        <h3>2020 — Crisis & Courage</h3>
-                        <p>
-                            Volunteered during the pandemic, assisting vaccination campaigns
-                            and learning real-world responsibility.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SLIDE 6 -->
-                <div class="about-slide">
-                    <div class="about-card">
-                        <img src="images/2018.jpg" class="about-img">
-                        <h3>2018 — The Spark</h3>
-                        <p>
-                            Competed in physics & robotics competitions.
-                            The birth of scientific curiosity.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SLIDE 7 -->
-                <div class="about-slide">
-                    <div class="about-card">
-                        <img src="images/2015.jpg" class="about-img">
-                        <h3>2015 — The Beginning</h3>
-                        <p>
-                            First Arduino. First circuit.  
-                            First dream of becoming an engineer.
-                        </p>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- RIGHT ARROW -->
-            <button class="about-arrow about-arrow-right">❯</button>
+            <!-- NAV CONTROLS -->
+            <button class="about-nav about-nav-left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="about-nav about-nav-right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
 
+            <div class="about-dots">
+                <span class="about-dot active" data-index="0"></span>
+                <span class="about-dot" data-index="1"></span>
+                <span class="about-dot" data-index="2"></span>
+                <span class="about-dot" data-index="3"></span>
+                <span class="about-dot" data-index="4"></span>
+            </div>
         </div>
     </div>
 </section>
 
+
+
+
+
 <!-- ---------------------- ACHIEVEMENTS ---------------------- -->
-<section id="achievements" class="section">
+<section id="achievements" class="section fade-in">
     <div class="section-content">
         <h2>Achievements</h2>
 
         <div class="certificate-carousel">
             <div class="carousel-track">
-                <div class="carousel-item"><img src="Certificates/Certificate1.jpg"></div>
-                <div class="carousel-item"><img src="Certificates/Certificate2.jpg"></div>
-                <div class="carousel-item"><img src="Certificates/Certificate3.jpg"></div>
-                <div class="carousel-item"><img src="Certificates/Certificate4.jpg"></div>
-                <div class="carousel-item"><img src="Certificates/Certificate5.jpg"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate1.jpg" alt="Certificate 1"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate2.jpg" alt="Certificate 2"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate3.gif" alt="Certificate 3"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate4.jpg" alt="Certificate 4"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate5.png" alt="Certificate 5"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate6.png" alt="Certificate 6"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate7.jpg" alt="Certificate 7"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate8.jpg" alt="Certificate 8"></div>
+                <div class="carousel-item"><img src="Certificates/Certificate9.jpg" alt="Certificate 9"></div>
             </div>
         </div>
-
     </div>
 </section>
 
 <!-- ---------------------- RESUME ---------------------- -->
-<section id="resume" class="section">
+<section id="resume" class="section fade-in">
     <div class="section-content resume-center">
         <a href="Belkis_CV.pdf" class="btn" download>Download CV</a>
     </div>
 </section>
 
 <!-- ---------------------- REFERENCES ---------------------- -->
-<section id="references" class="section">
+<section id="references" class="section fade-in">
     <div class="section-content">
         <h2 class="ref-title">References</h2>
 
         <div class="ref-timeline">
 
-            <div class="ref-entry">
+            <div class="ref-entry fade-in">
                 <div class="ref-dot"></div>
                 <div class="ref-card">
                     <h3>Prof. A</h3>
@@ -229,7 +343,7 @@
                 </div>
             </div>
 
-            <div class="ref-entry">
+            <div class="ref-entry fade-in">
                 <div class="ref-dot"></div>
                 <div class="ref-card">
                     <h3>Prof. B</h3>
@@ -238,7 +352,7 @@
                 </div>
             </div>
 
-            <div class="ref-entry">
+            <div class="ref-entry fade-in">
                 <div class="ref-dot"></div>
                 <div class="ref-card">
                     <h3>Prof. C</h3>
@@ -252,15 +366,38 @@
 </section>
 
 <!-- ---------------------- CONTACT ---------------------- -->
-<section id="contact" class="section">
+<section id="contact" class="section fade-in">
     <div class="section-content">
         <h2>Contact Me</h2>
-        <p>Email: belkis@example.com</p>
+
+        <div class="contact-center">
+
+            <!-- Email -->
+            <div class="contact-row">
+                <i class="fas fa-envelope contact-icon"></i>
+                <a href="mailto:belkisakaichi1@gmail.com" class="contact-text">
+                    belkisakaichi1@gmail.com
+                </a>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-row">
+                <i class="fas fa-phone contact-icon"></i>
+                <a href="tel:+9050114067632" class="contact-text">
+                    +90 501 140 67632
+                </a>
+            </div>
+
+        </div>
     </div>
 </section>
 
+
+
+<!-- -------- SCROLL TO TOP BUTTON -------- -->
+<div id="toTop"><i class="fas fa-arrow-up"></i></div>
+
+<!-- ---------------------- SCRIPTS ---------------------- -->
 <script src="script.js"></script>
 </body>
 </html>
-
-
